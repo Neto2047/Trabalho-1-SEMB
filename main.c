@@ -1390,7 +1390,43 @@ void floodFill (unsigned char binaryMatrix[2400], unsigned char x, unsigned char
         }
     } 
 }
+int Threshold(int *hist){
+    int total = 120*160;
+    double gsum = 0;
+    double gavg;
+    double n1=0;
+    double n2=0;
+    double m1=0;
+    double m2=0;
+    double var;
+    double maxVar=0;
+    int threshold;
 
+    int i;
+    for(i=0;i<256;i++){
+        gsum += (double)hist[i]*i;
+    }
+
+    gavg = gsum/total;
+    for(i=0;i<256;++i){
+	n1 += hist[i];
+
+	m1 += (double)i*hist[i];
+
+	n2 = total - n1;
+
+	m2 = gsum - m1;
+
+	var = (n1/total)*((m1/n1)-gavg)*((m1/n1)-gavg)+
+		(n2/total)*((m2/n2)-gavg)*((m2/n2)-gavg);
+
+	if(var > maxVar){
+	    maxVar = var;
+	    threshold = i;
+	}
+    }
+    return threshold;
+}
 
 
 /**
@@ -1404,7 +1440,9 @@ void floodFill (unsigned char binaryMatrix[2400], unsigned char x, unsigned char
  * @return
  */
 int runAlgorithm() {
-    int i, h, w;
+    int i, h, w, hist[256];
+
+    for(i=0;i<256;++i) hist[i] = 0;
 
     for(i=0;i<2400;++i){
         img[i] = 0;
@@ -1412,12 +1450,22 @@ int runAlgorithm() {
 
     for(h=0;h<120;++h){
         for(w=0;w<160;++w){
-            if(myImg[h][w] > 125){
-                setBit(img,h,w);
-                //printf("tadaaa\n");
-            }
+	    ++hist[myImg[h][w]];
+	}
+    }
+
+    i = Threshold(hist);
+    printf("%d\n",i);
+    for(h=0;h<120;++h){
+        for(w=0;w<160;++w){
+            if(myImg[h][w] < i){
+                resetBit(img,h,w);
+            }else{
+		setBit(img,h,w);
+	    }
         }
     }
+
     for(i=0;i<2400;++i){
         visited[i]=0;
     }
@@ -1428,11 +1476,6 @@ int runAlgorithm() {
 
     int connectedComps = 0;
 
-    //unsigned char originalVisited[2400],originalImg[2400];
-    /*for(i=0;i<2400;++i) {
-	originalVisited[i] = visited[i];
-	originalImg[i] = img[i];
-    }*/
 
     for (h = 0; h < 120; h++) {
         for (w = 0; w < 160; w++) {
