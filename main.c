@@ -1,4 +1,4 @@
-unsigned char myImg[120][160] = {
+const unsigned char myImg[120][160] = {
 48,49,49,49,49,49,49,49,49,50,49,49,50,50,50,50,50,50,50,50,
 51,51,51,51,51,51,52,52,52,52,51,51,52,52,51,52,52,52,52,53,
 52,52,51,51,52,52,52,52,51,51,52,53,53,53,53,52,52,52,52,53,
@@ -972,64 +972,64 @@ unsigned char myImg[120][160] = {
 // 'C' source line config statements
 
 // CONFIG1L
-//#pragma config FEXTOSC = OFF    // External Oscillator Selection (Oscillator not enabled)
-//#pragma config RSTOSC = HFINTOSC_64MHZ// Reset Oscillator Selection (HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1)
+#pragma config FEXTOSC = OFF    // External Oscillator Selection (Oscillator not enabled)
+#pragma config RSTOSC = HFINTOSC_64MHZ// Reset Oscillator Selection (HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1)
 
 // CONFIG1H
-//#pragma config CLKOUTEN = OFF   // Clock out Enable bit (CLKOUT function is disabled)
-//#pragma config PR1WAY = ON      // PRLOCKED One-Way Set Enable bit (PRLOCK bit can be cleared and set only once)
-//#pragma config CSWEN = ON       // Clock Switch Enable bit (Writing to NOSC and NDIV is allowed)
-//#pragma config FCMEN = ON       // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor enabled)
+#pragma config CLKOUTEN = OFF   // Clock out Enable bit (CLKOUT function is disabled)
+#pragma config PR1WAY = ON      // PRLOCKED One-Way Set Enable bit (PRLOCK bit can be cleared and set only once)
+#pragma config CSWEN = ON       // Clock Switch Enable bit (Writing to NOSC and NDIV is allowed)
+#pragma config FCMEN = ON       // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor enabled)
 
 // CONFIG2L
-//#pragma config MCLRE = EXTMCLR  // MCLR Enable bit (If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR )
-//#pragma config PWRTS = PWRT_OFF // Power-up timer selection bits (PWRT is disabled)
-//#pragma config MVECEN = ON      // Multi-vector enable bit (Multi-vector enabled, Vector table used for interrupts)
-//#pragma config IVT1WAY = ON     // IVTLOCK bit One-way set enable bit (IVTLOCK bit can be cleared and set only once)
-//#pragma config LPBOREN = OFF    // Low Power BOR Enable bit (ULPBOR disabled)
-//#pragma config BOREN = SBORDIS  // Brown-out Reset Enable bits (Brown-out Reset enabled , SBOREN bit is ignored)
+#pragma config MCLRE = EXTMCLR  // MCLR Enable bit (If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR )
+#pragma config PWRTS = PWRT_OFF // Power-up timer selection bits (PWRT is disabled)
+#pragma config MVECEN = ON      // Multi-vector enable bit (Multi-vector enabled, Vector table used for interrupts)
+#pragma config IVT1WAY = ON     // IVTLOCK bit One-way set enable bit (IVTLOCK bit can be cleared and set only once)
+#pragma config LPBOREN = OFF    // Low Power BOR Enable bit (ULPBOR disabled)
+#pragma config BOREN = SBORDIS  // Brown-out Reset Enable bits (Brown-out Reset enabled , SBOREN bit is ignored)
 
 // CONFIG2H
-//#pragma config BORV = VBOR_2P45 // Brown-out Reset Voltage Selection bits (Brown-out Reset Voltage (VBOR) set to 2.45V)
-//#pragma config ZCD = OFF        // ZCD Disable bit (ZCD disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCDCON)
-//#pragma config PPS1WAY = ON     // PPSLOCK bit One-Way Set Enable bit (PPSLOCK bit can be cleared and set only once; PPS registers remain locked after one clear/set cycle)
-//#pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
-//#pragma config DEBUG = OFF      // Debugger Enable bit (Background debugger disabled)
-//#pragma config XINST = OFF      // Extended Instruction Set Enable bit (Extended Instruction Set and Indexed Addressing Mode disabled)
+#pragma config BORV = VBOR_2P45 // Brown-out Reset Voltage Selection bits (Brown-out Reset Voltage (VBOR) set to 2.45V)
+#pragma config ZCD = OFF        // ZCD Disable bit (ZCD disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCDCON)
+#pragma config PPS1WAY = ON     // PPSLOCK bit One-Way Set Enable bit (PPSLOCK bit can be cleared and set only once; PPS registers remain locked after one clear/set cycle)
+#pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
+#pragma config DEBUG = OFF      // Debugger Enable bit (Background debugger disabled)
+#pragma config XINST = OFF      // Extended Instruction Set Enable bit (Extended Instruction Set and Indexed Addressing Mode disabled)
 
 // CONFIG3L
-//#pragma config WDTCPS = WDTCPS_31// WDT Period selection bits (Divider ratio 1:65536; software control of WDTPS)
-//#pragma config WDTE = OFF        // WDT Disabled; SWDTEN is ignored
+#pragma config WDTCPS = WDTCPS_31// WDT Period selection bits (Divider ratio 1:65536; software control of WDTPS)
+#pragma config WDTE = OFF        // WDT Disabled; SWDTEN is ignored
 
 // CONFIG3H
-//#pragma config WDTCWS = WDTCWS_7// WDT Window Select bits (window always open (100%); software control; keyed access not required)
-//#pragma config WDTCCS = SC      // WDT input clock selector (Software Control)
+#pragma config WDTCWS = WDTCWS_7// WDT Window Select bits (window always open (100%); software control; keyed access not required)
+#pragma config WDTCCS = SC      // WDT input clock selector (Software Control)
 
 // CONFIG4L
-//#pragma config BBSIZE = BBSIZE_512// Boot Block Size selection bits (Boot Block size is 512 words)
-//#pragma config BBEN = OFF       // Boot Block enable bit (Boot block disabled)
-//#pragma config SAFEN = OFF      // Storage Area Flash enable bit (SAF disabled)
-//#pragma config WRTAPP = OFF     // Application Block write protection bit (Application Block not write protected)
+#pragma config BBSIZE = BBSIZE_512// Boot Block Size selection bits (Boot Block size is 512 words)
+#pragma config BBEN = OFF       // Boot Block enable bit (Boot block disabled)
+#pragma config SAFEN = OFF      // Storage Area Flash enable bit (SAF disabled)
+#pragma config WRTAPP = OFF     // Application Block write protection bit (Application Block not write protected)
 
 // CONFIG4
-//#pragma config WRTB = OFF       // Configuration Register Write Protection bit (Configuration registers (300000-30000Bh) not write-protected)
-//#pragma config WRTC = OFF       // Boot Block Write Protection bit (Boot Block (000000-0007FFh) not write-protected)
-//#pragma config WRTD = OFF       // Data EEPROM Write Protection bit (Data EEPROM not write-protected)
-//#pragma config WRTSAF = OFF     // SAF Write protection bit (SAF not Write Protected)
-//#pragma config LVP = ON         // Low Voltage Programming Enable bit (Low voltage programming enabled. MCLR/VPP pin function is MCLR. MCLRE configuration bit is ignored)
+#pragma config WRTB = OFF       // Configuration Register Write Protection bit (Configuration registers (300000-30000Bh) not write-protected)
+#pragma config WRTC = OFF       // Boot Block Write Protection bit (Boot Block (000000-0007FFh) not write-protected)
+#pragma config WRTD = OFF       // Data EEPROM Write Protection bit (Data EEPROM not write-protected)
+#pragma config WRTSAF = OFF     // SAF Write protection bit (SAF not Write Protected)
+#pragma config LVP = ON         // Low Voltage Programming Enable bit (Low voltage programming enabled. MCLR/VPP pin function is MCLR. MCLRE configuration bit is ignored)
 
 // CONFIG5L
-//#pragma config CP = OFF         // PFM and Data EEPROM Code Protection bit (PFM and Data EEPROM code protection disabled)
+#pragma config CP = OFF         // PFM and Data EEPROM Code Protection bit (PFM and Data EEPROM code protection disabled)
 
 // CONFIG5H
 
-// #pragma config statements should precede project file includes.
+//#pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
-//#include <xc.h>
+#include <xc.h>
 
 // F_OSC
-//#define _XTAL_FREQ 64000000
+#define _XTAL_FREQ 64000000
 
 
 #include <stdio.h>
@@ -1039,7 +1039,7 @@ unsigned char myImg[120][160] = {
 #include <limits.h>
 #include <stdint.h>
 #include <time.h>
-//#include "uart.h"
+#include "uart.h"
 
 void setBit(unsigned char *v, unsigned char i, unsigned char j){
   unsigned short m=0, n=0;
@@ -1093,107 +1093,7 @@ short int capacity, front, rear, size;
 unsigned char arrayX[400];
 unsigned char arrayY[400];
 unsigned char visited[2400]; // Matriz que indica quais pixeis já foram visitados, em diferentes ocasiões.
-//unsigned char img[2];
-unsigned char img[2400]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,248,7,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,63,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,192,255,255,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,224,255,255,1,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,240,255,255,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-248,255,255,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,252,255,255,15,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,254,255,255,31,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,254,255,255,31,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,255,255,255,63,0,0,0,0,0,0,0,0,0,0,0,254,
-7,0,0,0,255,255,255,63,0,0,0,0,0,0,0,0,0,0,192,255,31,0,0,0,
-255,255,255,63,0,0,0,0,0,0,0,0,0,0,224,255,127,0,0,0,255,255,255,63,
-0,0,0,0,0,0,0,0,0,0,240,255,255,0,0,0,255,255,255,63,0,0,0,0,
-0,0,0,0,0,0,248,255,255,1,0,0,255,255,255,63,0,0,0,0,0,0,0,0,
-0,0,252,255,255,1,0,0,255,255,255,63,0,0,0,0,0,0,0,0,0,0,252,255,
-255,3,0,0,255,255,255,63,0,0,0,0,0,0,0,0,0,0,254,255,255,3,0,0,
-255,255,255,63,0,0,0,0,0,0,0,0,0,0,254,255,255,7,0,0,255,255,255,31,
-0,128,255,1,0,0,0,0,0,0,254,255,255,7,0,0,254,255,255,31,0,240,255,15,
-0,0,0,0,0,0,255,255,255,7,0,0,254,255,255,15,0,252,255,31,0,0,0,0,
-0,0,255,255,255,7,0,0,252,255,255,7,0,254,255,63,0,0,0,0,0,0,255,255,
-255,7,0,0,248,255,255,3,0,255,255,127,0,0,0,0,0,0,254,255,255,7,0,0,
-240,255,255,1,128,255,255,255,0,0,0,0,0,0,254,255,255,3,0,0,192,255,255,0,
-192,255,255,255,1,0,0,0,0,0,254,255,255,3,0,0,0,255,63,0,192,255,255,255,
-1,0,0,0,0,0,252,255,255,1,0,0,0,248,3,0,224,255,255,255,3,0,0,0,
-0,0,252,255,255,1,128,127,0,0,0,0,224,255,255,255,3,0,0,0,0,0,248,255,
-255,0,48,128,3,0,0,0,240,255,255,255,7,0,0,0,0,0,240,255,63,0,0,0,
-6,0,0,0,240,255,255,255,7,0,0,0,0,0,192,255,31,0,6,12,12,0,0,0,
-240,255,255,255,7,0,0,0,0,0,0,255,7,0,195,7,24,0,0,0,240,255,255,255,
-7,0,0,0,0,0,0,0,0,128,241,255,48,0,0,0,240,255,255,255,7,0,0,0,
-0,0,0,0,0,128,248,253,100,0,0,0,240,255,255,255,7,0,0,0,0,0,0,0,
-0,64,244,255,111,0,0,0,240,255,255,255,7,0,0,0,0,0,255,0,0,64,240,255,
-127,0,0,0,240,255,255,255,3,252,1,0,0,224,255,7,0,64,252,255,127,0,0,0,
-224,255,255,255,131,255,15,0,0,248,255,31,0,96,248,255,223,0,0,0,224,255,255,255,
-193,255,63,0,0,254,255,127,0,96,248,255,223,0,0,0,192,255,255,255,241,255,127,0,
-0,255,255,255,0,96,248,255,127,0,0,0,128,255,255,255,248,255,255,0,128,255,255,255,
-1,64,208,255,127,0,0,0,0,255,255,127,252,255,255,1,128,255,255,255,1,64,240,191,
-127,0,0,32,0,254,255,31,252,255,255,1,192,255,255,255,3,192,224,127,47,0,0,255,
-7,252,255,15,254,255,255,3,224,255,255,255,3,128,192,31,54,0,224,255,31,224,255,3,
-254,255,255,3,224,255,255,255,7,128,129,7,18,0,248,255,127,0,28,0,255,255,255,7,
-240,255,255,255,7,0,3,0,8,0,252,255,255,0,0,0,255,255,255,7,240,255,255,255,
-7,0,14,0,6,0,254,255,255,1,0,0,255,255,255,7,240,255,255,255,7,0,28,0,
-3,0,255,255,255,3,0,0,255,255,255,7,240,255,255,255,7,0,240,112,0,0,255,255,
-255,7,0,0,255,255,255,7,240,255,255,255,7,0,0,0,0,128,255,255,255,7,0,0,
-255,255,255,3,240,255,255,255,7,0,0,0,0,192,255,255,255,15,0,0,254,255,255,3,
-240,255,255,255,7,0,0,0,0,192,255,255,255,15,0,0,254,255,255,3,240,255,255,255,
-7,0,0,0,0,192,255,255,255,15,0,0,254,255,255,1,240,255,255,255,3,0,0,0,
-0,192,255,255,255,31,0,0,252,255,255,0,224,255,255,255,3,128,255,0,0,224,255,255,
-255,31,0,0,248,255,127,0,224,255,255,255,1,240,255,3,0,224,255,255,255,31,0,0,
-240,255,63,0,192,255,255,255,0,252,255,15,0,224,255,255,255,15,0,0,192,255,31,0,
-128,255,255,255,0,254,255,63,0,224,255,255,255,15,0,0,0,254,3,0,0,255,255,127,
-0,255,255,127,0,192,255,255,255,15,0,0,0,0,0,0,0,254,255,31,128,255,255,255,
-0,192,255,255,255,15,0,0,0,0,0,0,0,248,255,7,192,255,255,255,1,192,255,255,
-255,15,0,0,0,0,0,0,0,224,255,1,224,255,255,255,1,128,255,255,255,7,0,0,
-0,0,0,0,0,0,0,0,224,255,255,255,3,128,255,255,255,3,0,0,0,0,0,0,
-0,0,0,0,240,255,255,255,3,0,255,255,255,1,0,0,0,0,0,0,0,0,0,0,
-240,255,255,255,7,0,254,255,255,0,0,0,0,0,0,0,0,0,0,0,240,255,255,255,
-7,0,252,255,127,0,0,0,0,0,0,0,0,0,0,0,248,255,255,255,7,0,240,255,
-63,0,0,0,0,0,0,0,0,0,0,0,248,255,255,255,7,0,192,255,15,0,0,0,
-0,0,0,0,0,0,0,0,248,255,255,255,7,0,0,254,0,0,0,0,0,0,0,0,
-0,0,0,0,248,255,255,255,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-248,255,255,255,7,0,0,0,0,0,0,254,7,0,0,0,0,0,0,0,240,255,255,255,
-3,0,0,0,0,0,192,255,31,0,0,0,0,0,0,0,240,255,255,255,3,0,0,0,
-0,0,224,255,63,0,0,0,0,0,0,0,240,255,255,255,1,0,0,0,0,0,240,255,
-255,0,0,0,0,0,0,0,224,255,255,255,1,0,0,0,0,0,248,255,255,1,0,0,
-0,0,0,0,224,255,255,255,0,0,0,0,0,0,252,255,255,1,0,0,0,0,0,0,
-192,255,255,127,0,0,0,0,0,0,254,255,255,3,0,0,0,0,0,0,128,255,255,63,
-0,0,0,0,0,0,254,255,255,3,0,0,0,0,0,0,0,255,255,31,0,0,0,0,
-0,0,254,255,255,7,0,0,0,0,0,0,0,254,255,7,0,0,0,0,0,0,255,255,
-255,7,0,0,0,0,0,0,0,240,255,1,0,0,0,0,0,0,255,255,255,7,0,0,
-0,0,0,0,0,0,31,0,0,0,0,0,0,0,255,255,255,7,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,255,255,255,7,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,255,255,255,7,0,0,0,0,0,0,0,0,0,224,7,0,0,0,
-0,0,254,255,255,7,0,0,0,0,0,0,0,0,0,252,127,0,0,0,0,0,254,255,
-255,3,0,0,0,0,0,0,0,0,0,255,255,1,0,0,0,0,254,255,255,3,0,0,
-0,0,0,0,0,0,192,255,255,3,0,0,0,0,252,255,255,1,0,0,0,0,0,0,
-0,0,224,255,255,15,0,0,0,0,248,255,255,0,0,0,0,0,0,0,0,0,240,255,
-255,31,0,0,0,0,240,255,127,0,0,0,0,0,0,0,0,0,248,255,255,31,0,0,
-0,0,224,255,63,0,0,0,0,0,0,0,0,0,252,255,255,63,0,0,0,0,128,255,
-15,0,0,0,0,0,0,0,0,0,252,255,255,127,0,0,0,0,0,252,1,0,0,0,
-0,0,0,0,0,0,254,255,255,127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,254,255,255,127,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,255,
-255,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,255,255,255,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,255,255,255,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,255,255,255,255,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,255,255,255,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,255,255,255,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,255,
-255,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,255,255,127,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,254,255,255,127,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,254,255,255,63,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,254,255,255,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,252,255,255,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,248,255,
-255,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,240,255,255,7,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,224,255,255,3,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,128,255,255,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,254,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,224,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+unsigned char img[2400];
 
 /** @brief A função isFull determina se a fila passada por parâmetro está cheia ou não.
   * @param *queue Ponteiro para a fila
@@ -1362,30 +1262,30 @@ void floodFill (unsigned char binaryMatrix[2400], unsigned char x, unsigned char
         dequeue(&currentX, &currentY);//remove da fila e atualiza a posicao atual
         //binaryMatrix[currentX][currentY] = targetColor;//preenche o pixel atual com targetColor
         resetBit(binaryMatrix,currentX,currentY);
-	setBit(visited,currentX,currentY);//marca o pixel como visitado
-	//verifica vizinho acima, se ele for pixel de foreground e não
-	//foi visitado é preenchido e inserido na fila
+	    setBit(visited,currentX,currentY);//marca o pixel como visitado
+        //verifica vizinho acima, se ele for pixel de foreground e não
+        //foi visitado é preenchido e inserido na fila
         if (isValid(binaryMatrix, currentX+1, currentY, visited, 1)){
             //binaryMatrix[currentX+1][currentY] = targetColor;
-	    resetBit(binaryMatrix,currentX+1,currentY);
+            resetBit(binaryMatrix,currentX+1,currentY);
             push(currentX+1, currentY);
         }
 	//verifica vizinho abaixo, análogo ao caso anterior
         if (isValid(binaryMatrix, currentX-1, currentY, visited, 1)){
             //binaryMatrix[currentX-1][currentY] = targetColor;
-	    resetBit(binaryMatrix,currentX-1,currentY);
+            resetBit(binaryMatrix,currentX-1,currentY);
             push(currentX-1, currentY);
 	}
 	//verifica vizinho a direita, análogo ao caso anterior
         if (isValid(binaryMatrix, currentX, currentY+1, visited, 1)){
             //binaryMatrix[currentX][currentY+1] = targetColor;
-	    resetBit(binaryMatrix,currentX,currentY+1);
+            resetBit(binaryMatrix,currentX,currentY+1);
             push(currentX, currentY+1);
         }
 	//verifica vizinho a esquerda, análogo ao caso anterior
         if (isValid(binaryMatrix, currentX, currentY-1, visited, 1)){
             //binaryMatrix[currentX][currentY-1] = targetColor;
-	    resetBit(binaryMatrix,currentX,currentY-1);
+            resetBit(binaryMatrix,currentX,currentY-1);
             push(currentX, currentY-1);
         }
     } 
@@ -1439,8 +1339,10 @@ int Threshold(int *hist){
  * as componentes.
  * @return
  */
+
+unsigned short hist[256];
 int runAlgorithm() {
-    int i, h, w, hist[256];
+    int i, h, w;
 
     for(i=0;i<256;++i) hist[i] = 0;
 
@@ -1455,14 +1357,14 @@ int runAlgorithm() {
     }
 
     i = Threshold(hist);
-    printf("%d\n",i);
+    
     for(h=0;h<120;++h){
         for(w=0;w<160;++w){
             if(myImg[h][w] < i){
                 resetBit(img,h,w);
             }else{
-		setBit(img,h,w);
-	    }
+                setBit(img,h,w);
+            }
         }
     }
 
@@ -1485,25 +1387,16 @@ int runAlgorithm() {
             }
         }
     }
-//    char numcomps[10];
-  //  sprintf(numcomps,"%d",connectedComps);
+    //char numcomps[10];
+    //sprintf(numcomps,"%d",connectedComps);
     //UART_Escrever_Texto(numcomps);
-    //printf("\nconnectedComps = %d\n", connectedComps);
-    printf("Numero de componentes: %d\n",connectedComps);
+    printf("\nconnectedComps = %d\n", connectedComps);
+    //printf("Numero de componentes: %d\n",connectedComps);
     return 0;
 }
 
 int main() {
-    //int i = 0;
-    //while (i<10) {
-	//clock_t start = clock();
-    runAlgorithm();
-	//clock_t end = clock();
-	//printf("tempo = %.4lf ms\n",(double)(end-start)/(CLOCKS_PER_SEC/1000));
-	//++i;
-    //}
-
-    //for (int i = 0; i < 19200; i++) {
-    //    printf("%d ,", 255);
-    //}
+    while(1){
+      runAlgorithm();
+    }
 }
