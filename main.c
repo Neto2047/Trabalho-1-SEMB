@@ -972,64 +972,64 @@ const unsigned char myImg[120][160] = {
 // 'C' source line config statements
 
 // CONFIG1L
-#pragma config FEXTOSC = OFF    // External Oscillator Selection (Oscillator not enabled)
-#pragma config RSTOSC = HFINTOSC_64MHZ// Reset Oscillator Selection (HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1)
+//#pragma config FEXTOSC = OFF    // External Oscillator Selection (Oscillator not enabled)
+//#pragma config RSTOSC = HFINTOSC_64MHZ// Reset Oscillator Selection (HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1)
 
 // CONFIG1H
-#pragma config CLKOUTEN = OFF   // Clock out Enable bit (CLKOUT function is disabled)
-#pragma config PR1WAY = ON      // PRLOCKED One-Way Set Enable bit (PRLOCK bit can be cleared and set only once)
-#pragma config CSWEN = ON       // Clock Switch Enable bit (Writing to NOSC and NDIV is allowed)
-#pragma config FCMEN = ON       // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor enabled)
+//#pragma config CLKOUTEN = OFF   // Clock out Enable bit (CLKOUT function is disabled)
+//#pragma config PR1WAY = ON      // PRLOCKED One-Way Set Enable bit (PRLOCK bit can be cleared and set only once)
+//#pragma config CSWEN = ON       // Clock Switch Enable bit (Writing to NOSC and NDIV is allowed)
+//#pragma config FCMEN = ON       // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor enabled)
 
 // CONFIG2L
-#pragma config MCLRE = EXTMCLR  // MCLR Enable bit (If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR )
-#pragma config PWRTS = PWRT_OFF // Power-up timer selection bits (PWRT is disabled)
-#pragma config MVECEN = ON      // Multi-vector enable bit (Multi-vector enabled, Vector table used for interrupts)
-#pragma config IVT1WAY = ON     // IVTLOCK bit One-way set enable bit (IVTLOCK bit can be cleared and set only once)
-#pragma config LPBOREN = OFF    // Low Power BOR Enable bit (ULPBOR disabled)
-#pragma config BOREN = SBORDIS  // Brown-out Reset Enable bits (Brown-out Reset enabled , SBOREN bit is ignored)
+//#pragma config MCLRE = EXTMCLR  // MCLR Enable bit (If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR )
+//#pragma config PWRTS = PWRT_OFF // Power-up timer selection bits (PWRT is disabled)
+//#pragma config MVECEN = ON      // Multi-vector enable bit (Multi-vector enabled, Vector table used for interrupts)
+//#pragma config IVT1WAY = ON     // IVTLOCK bit One-way set enable bit (IVTLOCK bit can be cleared and set only once)
+//#pragma config LPBOREN = OFF    // Low Power BOR Enable bit (ULPBOR disabled)
+//#pragma config BOREN = SBORDIS  // Brown-out Reset Enable bits (Brown-out Reset enabled , SBOREN bit is ignored)
 
 // CONFIG2H
-#pragma config BORV = VBOR_2P45 // Brown-out Reset Voltage Selection bits (Brown-out Reset Voltage (VBOR) set to 2.45V)
-#pragma config ZCD = OFF        // ZCD Disable bit (ZCD disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCDCON)
-#pragma config PPS1WAY = ON     // PPSLOCK bit One-Way Set Enable bit (PPSLOCK bit can be cleared and set only once; PPS registers remain locked after one clear/set cycle)
-#pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
-#pragma config DEBUG = OFF      // Debugger Enable bit (Background debugger disabled)
-#pragma config XINST = OFF      // Extended Instruction Set Enable bit (Extended Instruction Set and Indexed Addressing Mode disabled)
+//#pragma config BORV = VBOR_2P45 // Brown-out Reset Voltage Selection bits (Brown-out Reset Voltage (VBOR) set to 2.45V)
+//#pragma config ZCD = OFF        // ZCD Disable bit (ZCD disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCDCON)
+//#pragma config PPS1WAY = ON     // PPSLOCK bit One-Way Set Enable bit (PPSLOCK bit can be cleared and set only once; PPS registers remain locked after one clear/set cycle)
+//#pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
+//#pragma config DEBUG = OFF      // Debugger Enable bit (Background debugger disabled)
+//#pragma config XINST = OFF      // Extended Instruction Set Enable bit (Extended Instruction Set and Indexed Addressing Mode disabled)
 
 // CONFIG3L
-#pragma config WDTCPS = WDTCPS_31// WDT Period selection bits (Divider ratio 1:65536; software control of WDTPS)
-#pragma config WDTE = OFF        // WDT Disabled; SWDTEN is ignored
+//#pragma config WDTCPS = WDTCPS_31// WDT Period selection bits (Divider ratio 1:65536; software control of WDTPS)
+//#pragma config WDTE = OFF        // WDT Disabled; SWDTEN is ignored
 
 // CONFIG3H
-#pragma config WDTCWS = WDTCWS_7// WDT Window Select bits (window always open (100%); software control; keyed access not required)
-#pragma config WDTCCS = SC      // WDT input clock selector (Software Control)
+//#pragma config WDTCWS = WDTCWS_7// WDT Window Select bits (window always open (100%); software control; keyed access not required)
+//#pragma config WDTCCS = SC      // WDT input clock selector (Software Control)
 
 // CONFIG4L
-#pragma config BBSIZE = BBSIZE_512// Boot Block Size selection bits (Boot Block size is 512 words)
-#pragma config BBEN = OFF       // Boot Block enable bit (Boot block disabled)
-#pragma config SAFEN = OFF      // Storage Area Flash enable bit (SAF disabled)
-#pragma config WRTAPP = OFF     // Application Block write protection bit (Application Block not write protected)
+//#pragma config BBSIZE = BBSIZE_512// Boot Block Size selection bits (Boot Block size is 512 words)
+//#pragma config BBEN = OFF       // Boot Block enable bit (Boot block disabled)
+//#pragma config SAFEN = OFF      // Storage Area Flash enable bit (SAF disabled)
+//#pragma config WRTAPP = OFF     // Application Block write protection bit (Application Block not write protected)
 
 // CONFIG4
-#pragma config WRTB = OFF       // Configuration Register Write Protection bit (Configuration registers (300000-30000Bh) not write-protected)
-#pragma config WRTC = OFF       // Boot Block Write Protection bit (Boot Block (000000-0007FFh) not write-protected)
-#pragma config WRTD = OFF       // Data EEPROM Write Protection bit (Data EEPROM not write-protected)
-#pragma config WRTSAF = OFF     // SAF Write protection bit (SAF not Write Protected)
-#pragma config LVP = ON         // Low Voltage Programming Enable bit (Low voltage programming enabled. MCLR/VPP pin function is MCLR. MCLRE configuration bit is ignored)
+//#pragma config WRTB = OFF       // Configuration Register Write Protection bit (Configuration registers (300000-30000Bh) not write-protected)
+//#pragma config WRTC = OFF       // Boot Block Write Protection bit (Boot Block (000000-0007FFh) not write-protected)
+//#pragma config WRTD = OFF       // Data EEPROM Write Protection bit (Data EEPROM not write-protected)
+//#pragma config WRTSAF = OFF     // SAF Write protection bit (SAF not Write Protected)
+//#pragma config LVP = ON         // Low Voltage Programming Enable bit (Low voltage programming enabled. MCLR/VPP pin function is MCLR. MCLRE configuration bit is ignored)
 
 // CONFIG5L
-#pragma config CP = OFF         // PFM and Data EEPROM Code Protection bit (PFM and Data EEPROM code protection disabled)
+//#pragma config CP = OFF         // PFM and Data EEPROM Code Protection bit (PFM and Data EEPROM code protection disabled)
 
 // CONFIG5H
 
 //#pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
-#include <xc.h>
+//#include <xc.h>
 
 // F_OSC
-#define _XTAL_FREQ 64000000
+//#define _XTAL_FREQ 64000000
 
 
 #include <stdio.h>
@@ -1039,7 +1039,7 @@ const unsigned char myImg[120][160] = {
 #include <limits.h>
 #include <stdint.h>
 #include <time.h>
-#include "uart.h"
+//#include "uart.h"
 
 void setBit(unsigned char *v, unsigned char i, unsigned char j){
   unsigned short m=0, n=0;
@@ -1072,18 +1072,18 @@ void resetBit(unsigned char *v, unsigned char i, unsigned char j){
 /*----------------------------------------------INIT QUEUE----------------------------------------------*/
 
 /*
- * Devido à restrição no uso de memória com a execução deste algoritmo, utilizamos uma fila baseada em array (ao invés 
- * de lista ligada), pois assim alocamos a matriz unidimensional da fila apenas uma vez, em sua inicialização na função
+ * Devido Ã  restriÃ§Ã£o no uso de memÃ³ria com a execuÃ§Ã£o deste algoritmo, utilizamos uma fila baseada em array (ao invÃ©s 
+ * de lista ligada), pois assim alocamos a matriz unidimensional da fila apenas uma vez, em sua inicializaÃ§Ã£o na funÃ§Ã£o
  * Flood Fill.
 */
 
 /*typedef struct Queue {
     /*
-     * Utilizamos inteiros que representam a frente da fila, a sua traseira, e seu tamanho, para que não sejam perdidos
-     * durante a manipulação da fila.
+     * Utilizamos inteiros que representam a frente da fila, a sua traseira, e seu tamanho, para que nÃ£o sejam perdidos
+     * durante a manipulaÃ§Ã£o da fila.
     */
     /*int front, rear, size;
-    int capacity; // Capacidade máxima da fila
+    int capacity; // Capacidade mÃ¡xima da fila
     unsigned char arrayX[400]; // Ponteiro para a fila que armazena uma coordenada no eixo X da imagem.
     unsigned char arrayY[400]; // Idem, para o eixo Y.
 } Queue;
@@ -1092,45 +1092,45 @@ void resetBit(unsigned char *v, unsigned char i, unsigned char j){
 short int capacity, front, rear, size;
 unsigned char arrayX[400];
 unsigned char arrayY[400];
-unsigned char visited[2400]; // Matriz que indica quais pixeis já foram visitados, em diferentes ocasiões.
+unsigned char visited[2400]; // Matriz que indica quais pixeis jÃ¡ foram visitados, em diferentes ocasiÃµes.
 unsigned char img[2400];
 
-/** @brief A função isFull determina se a fila passada por parâmetro está cheia ou não.
+/** @brief A funÃ§Ã£o isFull determina se a fila passada por parÃ¢metro estÃ¡ cheia ou nÃ£o.
   * @param *queue Ponteiro para a fila
-  * @return Retorna 1 se a fila está cheia, 0 caso contrário.
+  * @return Retorna 1 se a fila estÃ¡ cheia, 0 caso contrÃ¡rio.
   */
 int isFull () {
     return (size == capacity);
 }
 
 
-/** @brief A função isEmpty determina se a fila passada por parâmetro está vazia ou não.
+/** @brief A funÃ§Ã£o isEmpty determina se a fila passada por parÃ¢metro estÃ¡ vazia ou nÃ£o.
   * @param *queue Ponteiro para a fila
-  * @return Retorna 1 se a fila está vazia, 0 caso contrário.
+  * @return Retorna 1 se a fila estÃ¡ vazia, 0 caso contrÃ¡rio.
   */
 int isEmpty () {
     return (size == 0);
 }
 
-/** @brief A função push insere dois elementos, um na fila do eixo X, outro na fila do eixo Y.
+/** @brief A funÃ§Ã£o push insere dois elementos, um na fila do eixo X, outro na fila do eixo Y.
   * @param *queue Ponteiro para a fila que se deseja fazer push.
   * @param X Inteiro a ser inserido em X.
   * @param Y Inteiro a ser inserido em Y.
   */
 void push (unsigned char X, unsigned char Y) {
-    if (isFull()) return;  // Não fazer nada se estiver cheia.
-    rear = (rear+1) % capacity; // Array circular. A traseira é incrementada, módulo capacidade.
+    if (isFull()) return;  // NÃ£o fazer nada se estiver cheia.
+    rear = (rear+1) % capacity; // Array circular. A traseira Ã© incrementada, mÃ³dulo capacidade.
     arrayX[rear] = X; // Inserimos X em arrayX.
     arrayY[rear] = Y; // Inserimos Y em arrayY.
     size = size + 1; // Incrementamos o tamanho da fila.
 }
 
-/** @brief dequeue Retira da fila elementos na frente da fila. Retorna esses elementos por referência.
+/** @brief dequeue Retira da fila elementos na frente da fila. Retorna esses elementos por referÃªncia.
   * @param *x ponteiro para o elemento do eixo X a ser retornado
   * @param *y ponteiro para o elemento do eixo Y a ser retornado
   */
 void dequeue (unsigned char *x, unsigned char *y) {
-    if (isEmpty()) { // Não fazer nada se estiver vazia.
+    if (isEmpty()) { // NÃ£o fazer nada se estiver vazia.
         return;
     }
     *x = arrayX[front]; // x recebe o valor que estava na frente da fila
@@ -1141,24 +1141,34 @@ void dequeue (unsigned char *x, unsigned char *y) {
 
 /*------------------------------------------INIT FLOOD FILL-------------------------------------------*/
 
-/** @brief A função isValid serve tanto para determinar se valores x e y estão dentro dos limites de
-  * uma imagem 160x120, como para verificar se a posição indicada por esses dois números não foi já
-  * utilizada, e para se certificar que o valor dessa posição é o mesmo valor que um certo comp.
-  * @param binaryMatrix[120][160] Matriz binária representando a imagem passada a limiarização.
-  * @param x Posição x na matriz
-  * @param y Posição y na matriz
-  * @param visited[120][160] Matriz que indica se cada uma de suas posições já foi visitada no Flood Fill 
+/** @brief A funÃ§Ã£o isValid serve tanto para determinar se valores x e y estÃ£o dentro dos limites de
+  * uma imagem 160x120, como para verificar se a posiÃ§Ã£o indicada por esses dois nÃºmeros nÃ£o foi jÃ¡
+  * utilizada, e para se certificar que o valor dessa posiÃ§Ã£o Ã© o mesmo valor que um certo comp.
+  * @param binaryMatrix[120][160] Matriz binÃ¡ria representando a imagem passada a limiarizaÃ§Ã£o.
+  * @param x PosiÃ§Ã£o x na matriz
+  * @param y PosiÃ§Ã£o y na matriz
+  * @param visited[120][160] Matriz que indica se cada uma de suas posiÃ§Ãµes jÃ¡ foi visitada no Flood Fill 
   * @param comp Valor a ser comparado.
   */
 int isValid (unsigned char binaryMatrix[2400], unsigned char x, unsigned char y, unsigned char visited[2400], unsigned char comp) {
-    // Se x e y forem posições válidas, com um valor correto e que não tenham sido visitadas, retorne 1.
+    // Se x e y forem posiÃ§Ãµes vÃ¡lidas, com um valor correto e que nÃ£o tenham sido visitadas, retorne 1.
     if (x >= 0 && x < 120 && y >= 0 && y < 160 && (getBit(binaryMatrix,x,y) == comp) && (getBit(visited,x,y)==0)) {
         return 1;
     }
     return 0;
 }
 
-/** @brief A função erode aplica uma transformação de erosão na imagem, que consiste em tirar um pixel
+int isValidTransform (unsigned char binaryMatrix[2400], unsigned char x, unsigned char y, unsigned char comp) {
+    // Se x e y forem posiÃ§Ãµes vÃ¡lidas, com um valor correto e que nÃ£o tenham sido visitadas, retorne 1.
+    if (x >= 0 && x < 120 && y >= 0 && y < 160 && (getBit(binaryMatrix,x,y) == comp)) {
+        return 1;
+    }
+    return 0;
+}
+
+
+
+/** @brief A funÃ§Ã£o erode aplica uma transformaÃ§Ã£o de erosÃ£o na imagem, que consiste em tirar um pixel
   * do exterior de cada "objeto". Por exemplo:
   *                 0 0 0 0 0 0 0               0 0 0 0 0 0 0 
   *                 1 0 0 1 1 0 0               0 0 0 0 0 0 0     
@@ -1166,74 +1176,72 @@ int isValid (unsigned char binaryMatrix[2400], unsigned char x, unsigned char y,
   *                 0 0 1 1 1 1 0               0 0 0 1 1 0 0
   *                 0 0 0 1 1 0 0               0 0 0 0 0 0 0
   *                 0 0 0 0 0 0 0               0 0 0 0 0 0 0
-  * Com a execução dessa função, conseguimos eliminar pixels individuais que fiquem "soltos" na imagem,
-  * para que não sejam considerados uma componente conexa. É executada antes do dilate, para limpar a imagem.
-  * @param outBinaryMatrix[120][160] Matriz resultante da operação, passada por referência.
+  * Com a execuÃ§Ã£o dessa funÃ§Ã£o, conseguimos eliminar pixels individuais que fiquem "soltos" na imagem,
+  * para que nÃ£o sejam considerados uma componente conexa. Ã executada antes do dilate, para limpar a imagem.
+  * @param matrix1[120][160] Matriz resultante da operaÃ§Ã£o, passada por referÃªncia.
   * @param visited[120][160] Matriz de visitados
   */
-/*void erode (unsigned char outBinaryMatrix[2400], unsigned char visited[2400]) {
-    unsigned char orBinaryMatrix[2400]; // Criamos uma matriz para guardar os valores originais da matriz binária.
+void erode (unsigned char matrix1[2400], unsigned char visited[2400]) {
     for (int i = 0; i < 2400; i++) {
-        orBinaryMatrix[i] = outBinaryMatrix[i]; 
-            /* Armazenamos os valores originais, para comparação posterior.
-             * Isso é nececessário para que façamos a erosão sobre os pixels da imagem original, não da imagem
-             * alterada pela erosão.
+        visited[i] = matrix1[i]; 
+            /* Armazenamos os valores originais, para comparaÃ§Ã£o posterior.
+             * Isso Ã© nececessÃ¡rio para que faÃ§amos a erosÃ£o sobre os pixels da imagem original, nÃ£o da imagem
+             * alterada pela erosÃ£o.
              */
-    /*}
+    }
     for (int h = 0; h < 120; h++) {
         for (int w = 0; w < 160; w++) {
-            if (getBit(orBinaryMatrix,h,w) == 1) {  // Se o pixel estiver "pintado"
-                if ( (isValid(orBinaryMatrix, h, w-1, visited, 0) ||
-                      isValid(orBinaryMatrix, h, w+1, visited, 0) || 
-                      isValid(orBinaryMatrix, h+1, w, visited, 0) ||
-                      isValid(orBinaryMatrix, h-1, w, visited, 0) //||
-                      /* As verificações anteriores servem para determinar se algum dos vizinhos de um pixel branco
-                       * (vizinhos apenas em cima e em baixo, esquerda e direita), é preto. Se for, o pixel atual
+            if (getBit(visited,h,w) == 1) {  // Se o pixel estiver "pintado"
+                if ( (isValidTransform(visited, h, w-1,0) ||
+                      isValidTransform(visited, h, w+1,0) || 
+                      isValidTransform(visited, h+1, w,0) ||
+                      isValidTransform(visited, h-1, w,0) //||
+                      /* As verificaÃ§Ãµes anteriores servem para determinar se algum dos vizinhos de um pixel branco
+                       * (vizinhos apenas em cima e em baixo, esquerda e direita), Ã© preto. Se for, o pixel atual
                        * fica preto, pois isso significa que estamos na borda de um objeto.
                        */
-                /*)) {
-		    resetBit(outBinaryMatrix,h,w);
-                    //outBinaryMatrix[h][w] = 0;
+                )) {
+                    resetBit(matrix1,h,w);
+                    //matrix1[h][w] = 0;
                 }
             }
         }
     }
 }
 
-/** @brief A função dilate é análoga à erode, fazendo, porém, o contrário. Ou seja, aplica uma transformação de
-  * dilatação na imagem, que consiste em pintar de branco cada pixel do exterior imediato de cada "objeto". Exemplo:
+/** @brief A funÃ§Ã£o dilate Ã© anÃ¡loga Ã  erode, fazendo, porÃ©m, o contrÃ¡rio. Ou seja, aplica uma transformaÃ§Ã£o de
+  * dilataÃ§Ã£o na imagem, que consiste em pintar de branco cada pixel do exterior imediato de cada "objeto". Exemplo:
   *                 0 0 0 0 0 0 0               1 0 0 0 0 0 0
   *                 1 0 0 0 0 0 0               1 1 0 1 1 0 0
   *                 0 0 0 1 1 0 0     ---->     1 0 1 1 1 1 0
   *                 0 0 0 1 1 0 0               0 0 1 1 1 1 0
   *                 0 0 0 0 0 0 0               0 0 0 1 1 0 0
   *                 0 0 0 0 0 0 0               0 0 0 0 0 0 0
-  * Com a execução dessa função, conseguimos restaurar ao tamanho original cada objeto da imagem, após a execução do dilate.
-  * @param outBinaryMatrix[120][160] Matriz resultante da operação, passada por referência.
+  * Com a execuÃ§Ã£o dessa funÃ§Ã£o, conseguimos restaurar ao tamanho original cada objeto da imagem, apÃ³s a execuÃ§Ã£o do dilate.
+  * @param matrix1[120][160] Matriz resultante da operaÃ§Ã£o, passada por referÃªncia.
   * @param visited[120][160] Matriz de visitados
   */
-/*void dilate (unsigned char outBinaryMatrix[2400], unsigned char visited[2400]) {
-    unsigned char orBinaryMatrix[2400]; // Criamos uma matriz para guardar os valores originais da matriz binária.
+void dilate (unsigned char matrix1[2400], unsigned char visited[2400]) {
     for (int h = 0; h < 2400; h++) {
-        orBinaryMatrix[h] = outBinaryMatrix[h];
-            /* Armazenamos os valores originais, para comparação posterior.
-             * Isso é nececessário para que façamos a erosão sobre os pixels da imagem original, não da imagem
-             * alterada pela erosão.
+        visited[h] = matrix1[h];
+            /* Armazenamos os valores originais, para comparaÃ§Ã£o posterior.
+             * Isso Ã© nececessÃ¡rio para que faÃ§amos a erosÃ£o sobre os pixels da imagem original, nÃ£o da imagem
+             * alterada pela erosÃ£o.
              */
-    /*}
+    }
     for (int h = 0; h < 120; h++) {
         for (int w = 0; w < 160; w++) {
-            if (getBit(orBinaryMatrix,h,w) == 0) { // Se o pixel atual for preto.
-                if (isValid(orBinaryMatrix, h, w-1, visited, 1) ||
-                    isValid(orBinaryMatrix, h, w+1, visited, 1) ||
-                    isValid(orBinaryMatrix, h+1, w, visited, 1) ||
-                    isValid(orBinaryMatrix, h-1, w, visited, 1)// ||
-                    /* As verificações anteriores servem para determinar se algum vizinho de um pixel preto é
+            if (getBit(visited,h,w) == 0) { // Se o pixel atual for preto.
+                if (isValidTransform(visited, h, w-1, 1) ||
+                    isValidTransform(visited, h, w+1, 1) ||
+                    isValidTransform(visited, h+1, w, 1) ||
+                    isValidTransform(visited, h-1, w, 1)// ||
+                    /* As verificaÃ§Ãµes anteriores servem para determinar se algum vizinho de um pixel preto Ã©
                      * branco. Se for, pintamos o pixel atual de branco.
                      */
-                /*) {
-		    setBit(outBinaryMatrix,h,w);
-                    //outBinaryMatrix[h][w] = 255;
+                ) {
+                    setBit(matrix1,h,w);
+                    //matrix1[h][w] = 255;
                 }
             }
         }
@@ -1241,14 +1249,14 @@ int isValid (unsigned char binaryMatrix[2400], unsigned char x, unsigned char y,
 }
 
 /** @brief floodFill determina a area conectada a um dado pixel da imagem obtida.
-  * Se o pixel vizinho é de foreground (255) este é preenchido com targetColor e 
+  * Se o pixel vizinho Ã© de foreground (255) este Ã© preenchido com targetColor e 
   * inserido na fila sendo posteriormente marcado como visitado e removido da
-  * fila ao verificar seus vizinhos. A função encerra quando a fila for vazia.
+  * fila ao verificar seus vizinhos. A funÃ§Ã£o encerra quando a fila for vazia.
   *
-  * @param binaryMatrix[120][160] matriz de pixels da imagem binária
-  * @param x indica a posicão do pixel relativa às linhas da matriz
-  * @param y indica a posição do pixel relativas às colunas da matriz
-  * @param visited[120][160] visited[x][y] indica se o pixel (x,y) foi visitado (1) ou não (0)
+  * @param binaryMatrix[120][160] matriz de pixels da imagem binÃ¡ria
+  * @param x indica a posicÃ£o do pixel relativa Ã s linhas da matriz
+  * @param y indica a posiÃ§Ã£o do pixel relativas Ã s colunas da matriz
+  * @param visited[120][160] visited[x][y] indica se o pixel (x,y) foi visitado (1) ou nÃ£o (0)
   * @param targetColor inteiro entre 0 e 255 indicando uma cor em gray scale para preenchimento
   */
 void floodFill (unsigned char binaryMatrix[2400], unsigned char x, unsigned char y, unsigned char visited[2400]/*, int targetColor*/) {
@@ -1262,27 +1270,27 @@ void floodFill (unsigned char binaryMatrix[2400], unsigned char x, unsigned char
         dequeue(&currentX, &currentY);//remove da fila e atualiza a posicao atual
         //binaryMatrix[currentX][currentY] = targetColor;//preenche o pixel atual com targetColor
         resetBit(binaryMatrix,currentX,currentY);
-	    setBit(visited,currentX,currentY);//marca o pixel como visitado
-        //verifica vizinho acima, se ele for pixel de foreground e não
-        //foi visitado é preenchido e inserido na fila
+	setBit(visited,currentX,currentY);//marca o pixel como visitado
+        //verifica vizinho acima, se ele for pixel de foreground e nÃ£o
+        //foi visitado Ã© preenchido e inserido na fila
         if (isValid(binaryMatrix, currentX+1, currentY, visited, 1)){
             //binaryMatrix[currentX+1][currentY] = targetColor;
             resetBit(binaryMatrix,currentX+1,currentY);
             push(currentX+1, currentY);
         }
-	//verifica vizinho abaixo, análogo ao caso anterior
+	//verifica vizinho abaixo, anÃ¡logo ao caso anterior
         if (isValid(binaryMatrix, currentX-1, currentY, visited, 1)){
             //binaryMatrix[currentX-1][currentY] = targetColor;
             resetBit(binaryMatrix,currentX-1,currentY);
             push(currentX-1, currentY);
 	}
-	//verifica vizinho a direita, análogo ao caso anterior
+	//verifica vizinho a direita, anÃ¡logo ao caso anterior
         if (isValid(binaryMatrix, currentX, currentY+1, visited, 1)){
             //binaryMatrix[currentX][currentY+1] = targetColor;
             resetBit(binaryMatrix,currentX,currentY+1);
             push(currentX, currentY+1);
         }
-	//verifica vizinho a esquerda, análogo ao caso anterior
+	//verifica vizinho a esquerda, anÃ¡logo ao caso anterior
         if (isValid(binaryMatrix, currentX, currentY-1, visited, 1)){
             //binaryMatrix[currentX][currentY-1] = targetColor;
             resetBit(binaryMatrix,currentX,currentY-1);
@@ -1290,7 +1298,7 @@ void floodFill (unsigned char binaryMatrix[2400], unsigned char x, unsigned char
         }
     } 
 }
-int Threshold(int *hist){
+int Threshold(unsigned short *hist){
     int total = 120*160;
     double gsum = 0;
     double gavg;
@@ -1330,12 +1338,12 @@ int Threshold(int *hist){
 
 
 /**
- * @brief A função runAlgorithm executa todos os algoritmos já desenvolvidos. Primeiro é lido o caminho para um arquivo
- * pgm que se deseja que se execute as funções. Essa imagem é lida e armazenada na memória. Enquanto ela está sendo lida,
- * o histograma da imagem também está sendo gerado, histograma este que é posteriormente passado para a função Threshold.
- * Feito isso, e com o valor ótimo de limiarização obtido, gera-se uma imagem binária que posteriormente passa por erosão
- * e dilatação. Por fim, o Flood Fill é executado duas vezes, na primeira vez para se contar a quantidade de componentes
- * conexas, e na segunda para pintar essas componentes de forma a haver uma distribuição uniforme de cores entre todas
+ * @brief A funÃ§Ã£o runAlgorithm executa todos os algoritmos jÃ¡ desenvolvidos. Primeiro Ã© lido o caminho para um arquivo
+ * pgm que se deseja que se execute as funÃ§Ãµes. Essa imagem Ã© lida e armazenada na memÃ³ria. Enquanto ela estÃ¡ sendo lida,
+ * o histograma da imagem tambÃ©m estÃ¡ sendo gerado, histograma este que Ã© posteriormente passado para a funÃ§Ã£o Threshold.
+ * Feito isso, e com o valor Ã³timo de limiarizaÃ§Ã£o obtido, gera-se uma imagem binÃ¡ria que posteriormente passa por erosÃ£o
+ * e dilataÃ§Ã£o. Por fim, o Flood Fill Ã© executado duas vezes, na primeira vez para se contar a quantidade de componentes
+ * conexas, e na segunda para pintar essas componentes de forma a haver uma distribuiÃ§Ã£o uniforme de cores entre todas
  * as componentes.
  * @return
  */
@@ -1349,54 +1357,68 @@ int runAlgorithm() {
     for(i=0;i<2400;++i){
         img[i] = 0;
     }
-
+    //i = 0;
     for(h=0;h<120;++h){
         for(w=0;w<160;++w){
 	    ++hist[myImg[h][w]];
+	    /*++hist[myImg[h][w+1]];
+	    ++hist[myImg[h][w+2]];
+	    ++hist[myImg[h][w+3]];
+	    ++hist[myImg[h][w+4]];
+	    ++hist[myImg[h][w+5]];
+	    ++hist[myImg[h][w+6]];
+	    ++hist[myImg[h][w+7]];
+	    img[i] = 0;
+	    i++;*/
 	}
     }
 
     i = Threshold(hist);
+    printf("threshold: %d\n",i);
     
     for(h=0;h<120;++h){
         for(w=0;w<160;++w){
-            if(myImg[h][w] < i){
-                resetBit(img,h,w);
-            }else{
+            if(myImg[h][w] >= i){
                 setBit(img,h,w);
             }
         }
     }
 
+    erode(img, visited);         // Realizamos uma erosÃ£o para limpar pixels "soltos" na imagem.
+    dilate(img, visited);        // Em seguida, uma dilataÃ§Ã£o, para preservar o tamanho dos elementos.
+
     for(i=0;i<2400;++i){
         visited[i]=0;
     }
-
-    //erode(img, visited);         // Realizamos uma erosão para limpar pixels "soltos" na imagem.
-    //dilate(img, visited);        // Em seguida, uma dilatação, para preservar o tamanho dos elementos.
-
-
+    
     int connectedComps = 0;
 
 
     for (h = 0; h < 120; h++) {
         for (w = 0; w < 160; w++) {
-            if ((getBit(img,h,w)==1) && (getBit(visited,h,w)==0)) {    // Se o pixel atual for branco e não tiver sido visitado
+            if ((getBit(img,h,w)==1) && (getBit(visited,h,w)==0)) {    // Se o pixel atual for branco e nÃ£o tiver sido visitado
                 connectedComps++;                           // aumentamos a contagem de componentes
                 floodFill(img, h, w, visited);       // e preenchemos aquela componente com uma cor qualquer.
             }
         }
     }
     //char numcomps[10];
-    //sprintf(numcomps,"%d",connectedComps);
-    //UART_Escrever_Texto(numcomps);
+    //sprintf(numcomps,"%d\n",connectedComps);
+    ///UART_Escrever_Texto(numcomps);
     printf("\nconnectedComps = %d\n", connectedComps);
     //printf("Numero de componentes: %d\n",connectedComps);
     return 0;
 }
 
 int main() {
+    clock_t start, end;
+    //UART_iniciar();
     while(1){
-      runAlgorithm();
+        //UART_Escrever_Texto("bbb");
+        start = clock();
+        runAlgorithm();
+	end = clock();
+	printf("%.4lf\n",(double)(end-start)/(CLOCKS_PER_SEC/1000.0));
     }
 }
+
