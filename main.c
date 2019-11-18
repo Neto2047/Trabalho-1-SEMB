@@ -1181,9 +1181,9 @@ int isValidTransform (unsigned char binaryMatrix[2400], unsigned char x, unsigne
   * @param matrix1[120][160] Matriz resultante da operaÃ§Ã£o, passada por referÃªncia.
   * @param visited[120][160] Matriz de visitados
   */
-void erode (unsigned char matrix1[2400], unsigned char visited[2400]) {
+void erode (unsigned char matrix1[2400], unsigned char cpImg[2400]) {
     for (int i = 0; i < 2400; i++) {
-        visited[i] = matrix1[i]; 
+        cpImg[i] = matrix1[i]; 
             /* Armazenamos os valores originais, para comparaÃ§Ã£o posterior.
              * Isso Ã© nececessÃ¡rio para que faÃ§amos a erosÃ£o sobre os pixels da imagem original, nÃ£o da imagem
              * alterada pela erosÃ£o.
@@ -1191,16 +1191,16 @@ void erode (unsigned char matrix1[2400], unsigned char visited[2400]) {
     }
     for (int h = 0; h < 120; h++) {
         for (int w = 0; w < 160; w++) {
-            if (getBit(visited,h,w) == 1) {  // Se o pixel estiver "pintado"
-                if ( (isValidTransform(visited, h, w-1,0) ||
-                      isValidTransform(visited, h, w+1,0) || 
-                      isValidTransform(visited, h+1, w,0) ||
-                      isValidTransform(visited, h-1, w,0) //||
+            if (getBit(cpImg,h,w) == 1) {  // Se o pixel estiver "pintado"
+                if (  isValidTransform(cpImg, h, w-1,0) ||
+                      isValidTransform(cpImg, h, w+1,0) || 
+                      isValidTransform(cpImg, h+1, w,0) ||
+                      isValidTransform(cpImg, h-1, w,0) //||
                       /* As verificaÃ§Ãµes anteriores servem para determinar se algum dos vizinhos de um pixel branco
                        * (vizinhos apenas em cima e em baixo, esquerda e direita), Ã© preto. Se for, o pixel atual
                        * fica preto, pois isso significa que estamos na borda de um objeto.
                        */
-                )) {
+                ) {
                     resetBit(matrix1,h,w);
                     //matrix1[h][w] = 0;
                 }
@@ -1221,26 +1221,27 @@ void erode (unsigned char matrix1[2400], unsigned char visited[2400]) {
   * @param matrix1[120][160] Matriz resultante da operaÃ§Ã£o, passada por referÃªncia.
   * @param visited[120][160] Matriz de visitados
   */
-void dilate (unsigned char matrix1[2400], unsigned char visited[2400]) {
+void dilate (unsigned char matrix1[2400], unsigned char cpImg[2400]) {
     for (int h = 0; h < 2400; h++) {
-        visited[h] = matrix1[h];
+        cpImg[h] = matrix1[h];
             /* Armazenamos os valores originais, para comparaÃ§Ã£o posterior.
              * Isso Ã© nececessÃ¡rio para que faÃ§amos a erosÃ£o sobre os pixels da imagem original, nÃ£o da imagem
              * alterada pela erosÃ£o.
              */
     }
-    for (int h = 0; h < 120; h++) {
-        for (int w = 0; w < 160; w++) {
-            if (getBit(visited,h,w) == 0) { // Se o pixel atual for preto.
-                if (isValidTransform(visited, h, w-1, 1) ||
-                    isValidTransform(visited, h, w+1, 1) ||
-                    isValidTransform(visited, h+1, w, 1) ||
-                    isValidTransform(visited, h-1, w, 1)// ||
+    for (int h = 0; h < 120; ++h) {
+        for (int w = 0; w < 160; ++w) {
+            if (getBit(cpImg,h,w) == 0) { // Se o pixel atual for preto.
+                if (isValidTransform(cpImg, h, w-1, 1) ||
+                    isValidTransform(cpImg, h, w+1, 1) ||
+                    isValidTransform(cpImg, h+1, w, 1) ||
+                    isValidTransform(cpImg, h-1, w, 1) // ||
                     /* As verificaÃ§Ãµes anteriores servem para determinar se algum vizinho de um pixel preto Ã©
                      * branco. Se for, pintamos o pixel atual de branco.
                      */
                 ) {
                     setBit(matrix1,h,w);
+		    //setBit(visited,h,w);
                     //matrix1[h][w] = 255;
                 }
             }
@@ -1349,19 +1350,19 @@ int Threshold(unsigned short *hist){
  */
 
 unsigned short hist[256];
-int runAlgorithm() {
+void runAlgorithm() {
     int i, h, w;
 
     for(i=0;i<256;++i) hist[i] = 0;
 
-    for(i=0;i<2400;++i){
+    /*for(i=0;i<2400;++i){
         img[i] = 0;
-    }
-    //i = 0;
+    }*/
+    i = 0;
     for(h=0;h<120;++h){
-        for(w=0;w<160;++w){
+        for(w=0;w<160;w+=8){
 	    ++hist[myImg[h][w]];
-	    /*++hist[myImg[h][w+1]];
+	    ++hist[myImg[h][w+1]];
 	    ++hist[myImg[h][w+2]];
 	    ++hist[myImg[h][w+3]];
 	    ++hist[myImg[h][w+4]];
@@ -1369,12 +1370,12 @@ int runAlgorithm() {
 	    ++hist[myImg[h][w+6]];
 	    ++hist[myImg[h][w+7]];
 	    img[i] = 0;
-	    i++;*/
+	    i++;
 	}
     }
 
     i = Threshold(hist);
-    printf("threshold: %d\n",i);
+   // printf("threshold: %d\n",i);
     
     for(h=0;h<120;++h){
         for(w=0;w<160;++w){
@@ -1393,7 +1394,6 @@ int runAlgorithm() {
     
     int connectedComps = 0;
 
-
     for (h = 0; h < 120; h++) {
         for (w = 0; w < 160; w++) {
             if ((getBit(img,h,w)==1) && (getBit(visited,h,w)==0)) {    // Se o pixel atual for branco e nÃ£o tiver sido visitado
@@ -1402,23 +1402,21 @@ int runAlgorithm() {
             }
         }
     }
-    //char numcomps[10];
-    //sprintf(numcomps,"%d\n",connectedComps);
-    ///UART_Escrever_Texto(numcomps);
-    printf("\nconnectedComps = %d\n", connectedComps);
+  //  char numcomps[10];
+  //  sprintf(numcomps,"%d\n",connectedComps);
+  //  UART_Escrever_Texto(numcomps);
     //printf("Numero de componentes: %d\n",connectedComps);
-    return 0;
 }
 
 int main() {
-    clock_t start, end;
-    //UART_iniciar();
+    //clock_t start, end;
+//    UART_iniciar();
     while(1){
         //UART_Escrever_Texto("bbb");
-        start = clock();
+        //start = clock();
         runAlgorithm();
-	end = clock();
-	printf("%.4lf\n",(double)(end-start)/(CLOCKS_PER_SEC/1000.0));
+	//end = clock();
+	//printf("%.4lf\n",(double)(end-start)/(CLOCKS_PER_SEC/1000.0));
     }
+  return 0;
 }
-
